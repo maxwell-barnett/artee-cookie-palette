@@ -1,0 +1,387 @@
+/* Tione - Cookie Decorating Portfolio Styles */
+
+/* 
+  Earthy & Cutesy Color Palette 
+  Based on user request: Brown, Green, Purple, Cream
+*/
+:root {
+  --bg-cream: #FAF3E0;        /* Soft warm cream background */
+  --bg-white: #FFFFFF;        /* White for cards to pop against cream */
+  --text-brown: #5D4037;      /* Dark chocolate brown for main text */
+  --text-brown-light: #8D6E63;/* Lighter brown for subtitles */
+  --accent-sage: #9CAF88;     /* Muted sage green */
+  --accent-purple: #CABBE9;   /* Soft pastel purple */
+  --accent-pink: #F4C2C2;     /* Very subtle pink for highlights */
+  --nav-height: 70px;
+  
+  --font-heading: 'Fredoka', sans-serif; /* Cutesy rounded font */
+  --font-body: 'Nunito', sans-serif;     /* Clean rounded sans-serif */
+  
+  --shadow-soft: 0 4px 15px rgba(93, 64, 55, 0.1);
+  --radius-lg: 20px;
+  --radius-md: 12px;
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-cream);
+  color: var(--text-brown);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--text-brown);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: rgba(250, 243, 224, 0.95); /* Semi-transparent cream */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 45px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--text-brown);
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  font-weight: 700;
+  color: var(--text-brown);
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent-sage);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(135deg, var(--bg-cream) 0%, #fff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background blobs */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  background-color: var(--accent-purple);
+  opacity: 0.2;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  left: -5%;
+  width: 250px;
+  height: 250px;
+  background-color: var(--accent-sage);
+  opacity: 0.2;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-brown);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--text-brown-light);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--accent-sage);
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background-color: #8CA077; /* Slightly darker sage */
+  box-shadow: 0 6px 20px rgba(156, 175, 136, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--accent-purple);
+  margin-left: 15px;
+}
+
+.btn-secondary:hover {
+  background-color: #B9A8DC;
+}
+
+/* About Section */
+.about {
+  padding: 80px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: var(--bg-white);
+  border-radius: 40px 40px 0 0; /* Rounded top */
+  margin-top: -40px; /* Overlap hero slightly */
+  position: relative;
+  z-index: 2;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: var(--accent-sage);
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius-lg) 50% var(--radius-lg) 50%; /* Playful shape */
+  box-shadow: var(--shadow-soft);
+  border: 5px solid var(--bg-cream);
+}
+
+/* Portfolio / Gallery Section */
+.gallery {
+  padding: 80px 5%;
+  background-color: var(--bg-cream);
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  display: inline-block;
+  position: relative;
+}
+
+.gallery h2::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background-color: var(--accent-purple);
+  margin: 5px auto 0;
+  border-radius: 2px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.gallery-item {
+  background: white;
+  padding: 10px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) rotate(1deg); /* Slight tilt on hover for playfulness */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.gallery-caption {
+  padding: 15px 5px 5px;
+  font-weight: 700;
+  color: var(--text-brown);
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 5%;
+  background-color: var(--accent-sage);
+  color: white;
+  text-align: center;
+  border-radius: 40px 40px 0 0;
+}
+
+.contact h2 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--bg-cream);
+  color: var(--text-brown);
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.social-links a:hover {
+  background-color: var(--accent-purple);
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: var(--text-brown);
+  color: var(--bg-cream);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .about-image {
+    order: -1; /* Image first on mobile */
+    margin-bottom: 20px;
+  }
+  
+  nav {
+    display: none; /* Simple hide for now, could add hamburger */
+  }
+  
+  /* Simple Mobile Menu Fallback: Just show simple links below logo or clean up */
+  header {
+    justify-content: center;
+  }
+  
+  .logo-container {
+    justify-content: center;
+  }
+}

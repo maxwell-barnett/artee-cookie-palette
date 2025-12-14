@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tione - Cookie Decorating</title>
+    
+    <!-- Google Fonts: Fredoka (Headings) and Nunito (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo-container">
+            <!-- Logo Image -->
+            <img src="assets/logo.png" alt="Tione Cookies Logo">
+            <span class="logo-text">Tione</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Edible Art, Baked with Love</h1>
+            <p>Custom decorated cookies for every special occasion. Turning your sweetest moments into delicious memories.</p>
+            <a href="#gallery" class="btn">View Gallery</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-image">
+            <!-- 
+                MAINTENANCE NOTE: 
+                To change the profile picture, just replace the 'src' below with your new image path.
+                Make sure the image is square-ish for best results!
+            -->
+            <!-- Using a cookie image as placeholder for now, ideally this is a photo of the decorator -->
+            <img src="assets/cookie2.png" alt="About the Baker">
+        </div>
+        <div class="about-text">
+            <h2>Little Details, Big Smiles</h2>
+            <p>Hi! I'm the baker behind Tione. I started this journey because I believe that cookies shouldn't just taste amazing—they should look magical too!</p>
+            <br>
+            <p>My style is inspired by nature, combining earthy tones with cutesy, whimsical designs. Whether it's a baby shower, a wedding, or just a Tuesday treat, I pour my heart into every batch.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>My Latest Creations</h2>
+        <p>A peek into the oven...</p>
+        
+        <div class="gallery-grid">
+            
+            <!-- GALLERY ITEM START -->
+            <!-- 
+                 MAINTENANCE NOTE:
+                 To add a new cookie photo, copy the entire block from "GALLERY ITEM START" to "GALLERY ITEM END"
+                 and paste it right after the last END tag. Then update the 'src' and descriptions.
+            -->
+            <div class="gallery-item">
+                <img src="assets/cookie1.png" alt="Flower Cookies">
+                <div class="gallery-caption">Floral Fantasy Set</div>
+            </div>
+            <!-- GALLERY ITEM END -->
+
+            <div class="gallery-item">
+                <img src="assets/cookie3.png" alt="Woodland Cookies">
+                <div class="gallery-caption">Woodland Creatures</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/cookie2.png" alt="Heart Cookies">
+                <div class="gallery-caption">Wedding Hearts</div>
+            </div>
+            
+            <!-- Add new gallery items here! -->
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Let's Bake Something Special!</h2>
+        
+        <div class="contact-container">
+            <p>Have an idea for a custom order? I'd love to hear it!</p>
+            <p>Currently accepting orders for 2026.</p>
+            
+            <div class="social-links">
+                <!-- Replace '#' with your actual social media profile links -->
+                <a href="#">Instagram</a>
+                <a href="#">Email Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tione Cookie Decorating. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
