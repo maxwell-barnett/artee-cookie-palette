@@ -771,6 +771,27 @@ footer {
         margin-bottom: 20px;
     }
 
+    /* About Page Specific Mobile Adjustments */
+    .about-text-block {
+        width: 100%;
+        min-width: unset;
+        text-align: center;
+    }
+
+    .about-text-block h2 {
+        font-size: 2.2rem;
+        white-space: normal;
+    }
+
+    .about-text-block p {
+        font-size: 1.1rem;
+    }
+
+    .about-image-large {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
     /* Mobile Navigation */
     .mobile-menu-btn {
         display: block;
@@ -848,5 +869,28 @@ footer {
 @media (min-width: 769px) {
     .mobile-menu-btn {
         display: none;
+    }
+}
+/* Extra small mobile adjustments */
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    .about-hero p {
+        font-size: 1.1rem;
+    }
+    .about-text-block h2 {
+        font-size: 1.8rem;
+    }
+    .about-text-block p {
+        font-size: 1rem;
+    }
+    .quote-section blockquote {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    .quote-section blockquote::before,
+    .quote-section blockquote::after {
+        font-size: 3rem;
     }
 }
